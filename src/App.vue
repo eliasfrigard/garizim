@@ -18,6 +18,7 @@
  -->
   <div class="player-div">
     <Player
+      data-aos="fade-in"
       v-if="playerIsActive"
       class="audio-player"
       @close-player="closePlayer"
@@ -28,6 +29,9 @@
 <script>
 /* import Footer from '@/components/Footer.vue'
  */ import Player from '@/components/Player.vue'
+
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 export default {
   name: 'App',
@@ -42,6 +46,8 @@ export default {
     }
   },
   created() {
+    AOS.init()
+
     window.addEventListener('scroll', this.onScroll)
   },
   methods: {
@@ -59,7 +65,6 @@ export default {
       this.playerIsActive = false
     },
     openPlayer() {
-      console.log('open')
       const playerDiv = document.querySelector('.player-div')
       const player = document.createElement('Player')
 
@@ -131,5 +136,8 @@ export default {
 hr {
   width: 70%;
   opacity: 0.2;
+}
+
+a {
 }
 </style>

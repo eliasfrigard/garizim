@@ -5,8 +5,8 @@
   </div>
   <div class="ui container content">
     <div id="welcome" class="ui container">
-      <h2 class="welcome-title">GARIZIM - MODERN FOLK</h2>
-      <p>
+      <h2 class="welcome-title" data-aos="fade-in">GARIZIM - MODERN FOLK</h2>
+      <p data-aos="fade-in">
         Garizim is a colorful live experience taking the listener on musical
         journeys. With the unique line-up of hurdy-gurdy, saxophones and double
         bass, the young Swedish trio creates a highly contemporary musical
@@ -14,7 +14,7 @@
         folk, indie and jazz meets.
       </p>
 
-      <p>
+      <p data-aos="fade-in">
         Starting at a young age in 2010 - Garizim became known as a young
         progressive folk trio and toured extensively in Sweden. The band got
         nominated as the Best Newcomer of the Year at the Swedish Folk & World
@@ -24,26 +24,51 @@
         five original compositions, Garizim enters a new era - Celebrating more
         than 10 years together.
       </p>
-      <p>
+      <p data-aos="fade-in">
         <b>Elias Frigård:</b> Soprano- & Baritone Saxophone <br />
         <b>Johannes Geworkian Hellman:</b> Hurdy-Gurdy <br /><b>
           Jordi Carrasco Hjelm:</b
         >
         Double Bass
       </p>
+      <div data-aos="fade-in" id="welcome-meta">
+        <p>
+          <a href="mailto:garizimtrio@hotmail.com">garizimtrio@hotmail.com</a>
+          <br />+46(0)736750310 - Johannes<br />+46(0)706691374 - Elias
+        </p>
+      </div>
       <div class="garizim-links">
-        <i class="fab fa-facebook fa-lg"></i>
-        <i class="fab fa-instagram fa-lg"></i>
-        <i class="fab fa-spotify fa-lg"></i>
-        <i class="fab fa-bandcamp fa-lg"></i>
-        <i class="fab fa-youtube fa-lg"></i>
-        <i class="fab fa-soundcloud fa-lg"></i>
+        <a href="https://www.facebook.com/Garizimmusic">
+          <i class="fab fa-facebook fa-lg" data-aos="slide-right"></i
+        ></a>
+        <a
+          href="https://open.spotify.com/album/43AwTLyEl1frgfDGzYBc1F?si=MWUtFkz9TouuQEtzhHj4Ww"
+          ><i class="fab fa-spotify fa-lg" data-aos="slide-right"></i
+        ></a>
+        <a
+          href="https://music.apple.com/ca/album/moments-in-between-ep/1611755467"
+          ><i class="fab fa-apple fa-lg" data-aos="slide-right"></i
+        ></a>
+        <a
+          href="https://music.amazon.com/albums/B09TFT2RV1?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=FI&ref=dm_sh_JQ9UoDucPhzGrcRMOAKO67jHQ"
+          ><i class="fab fa-amazon fa-lg" data-aos="slide-right"></i
+        ></a>
+        <a
+          href="https://youtube.com/playlist?list=OLAK5uy_nsX0XvldTvh6GkeHUagX3twvNEynFNUzI"
+          ><i class="fab fa-youtube fa-lg" data-aos="slide-right"></i
+        ></a>
+        <a href="https://soundcloud.com/garizim"
+          ><i class="fab fa-soundcloud fa-lg" data-aos="slide-right"></i
+        ></a>
       </div>
     </div>
     <hr />
-    <h3 id="so-me-title" class="welcome-title">SOCIAL MEDIA</h3>
+    <h3 id="so-me-title" class="welcome-title" data-aos="fade-in">
+      SOCIAL MEDIA
+    </h3>
     <div class="ui container social-media">
       <div
+        data-aos="fade-in"
         class="fb-page"
         data-href="https://www.facebook.com/Garizimmusic"
         data-tabs="timeline"
@@ -64,6 +89,7 @@
       <!-- Div -->
       <div class="spotify-page">
         <iframe
+          data-aos="fade-in"
           style="border-radius: 12px"
           src="https://open.spotify.com/embed/playlist/0ed7GYbxtM9fmZ7FkRG8ii?utm_source=generator&theme=0"
           width="100%"
@@ -113,27 +139,27 @@ export default {
     },
     setBackgroundImage(height) {
       const bandTitle = document.querySelector('#band-title')
-      console.log(bandTitle)
+      const contents = document.querySelectorAll('.content')
+
+      const first = contents[0].offsetTop
+      const second = contents[1].offsetTop
+      const third = contents[2].offsetTop
 
       let backgroundImage = ''
 
-      if (height < 951) {
-        backgroundImage = '/images/Garizim2019-0979.jpg'
+      if (height < first) {
+        backgroundImage = '/images/webp/Garizim2019-0979.webp'
         bandTitle.style.display = 'block'
-        // first image
-      } else if (height > 951 && height < 3456) {
-        backgroundImage = '/images/garizim_press_web.jpg'
+      } else if (height > first && height < second) {
+        backgroundImage = '/images/webp/garizim_press_web.webp'
         bandTitle.style.display = 'none'
-        // second image
-      } else if (height > 3456 && height < 5404) {
-        backgroundImage = '/images/Garizim2019-0974_bw.jpg'
+      } else if (height > second && height < third) {
+        backgroundImage = '/images/webp/Garizim2019-0974_bw.webp'
         bandTitle.style.display = 'none'
-        // third image
       } else {
         backgroundImage =
-          '/images/69608686_10157410500941280_5649243090850938880_n.jpg'
+          '/images/webp/69608686_10157410500941280_5649243090850938880_n.webp'
         bandTitle.style.display = 'none'
-        // fourth image
       }
 
       const home = document.querySelector('.home')
@@ -155,7 +181,11 @@ export default {
   left: 0;
   height: 100vh;
   width: 100%;
-  background-image: url('/images/Garizim2019-0979.jpg');
+  background-image: url('/images/webp/Garizim2019-0979.webp');
+  content: url('/images/webp/Garizim2019-0979.webp')
+    url('/images/webp/garizim_press_web.webp')
+    url('/images/webp/Garizim2019-0974_bw.webp')
+    url('/images/webp/69608686_10157410500941280_5649243090850938880_n.webp');
   background-size: cover;
   background-position: center;
 }
@@ -204,7 +234,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 100px;
+  margin: 100px 0 70px 0;
 }
 
 #welcome p,
@@ -223,6 +253,10 @@ export default {
   margin: 20px 0;
 }
 
+#welcome-meta p {
+  font-size: 16px;
+}
+
 .divider {
   height: 85vh;
   width: 100%;
@@ -236,11 +270,15 @@ export default {
   left: 125px;
   justify-content: center;
   align-items: center;
-  transform: translateY(20px);
+  transform: translateY(-50px);
   cursor: pointer;
+
+  color: rgba(141, 183, 222, 1);
+  transition: all 100ms ease;
 }
 
 .garizim-links i:hover {
+  transform: scale(1.15);
   cursor: pointer;
   opacity: 1;
 }

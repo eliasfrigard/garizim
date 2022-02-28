@@ -1,8 +1,10 @@
 <template>
   <div class="wrapper">
     <div class="ui container album-header">
-      <h2 class="album-title">NEW MUSIC RELEASED IN MARCH 2022!</h2>
-      <p>
+      <h2 class="album-title" data-aos="fade-in">
+        NEW MUSIC RELEASED IN MARCH 2022!
+      </h2>
+      <p data-aos="fade-in">
         During four days in the summer of 2018, Garizim recorded some new music
         together. It feels like a very long time ago. The plan was to release
         the our new creation as soon as possible, but something happened, and
@@ -13,16 +15,16 @@
         platforms such as Spotify/Tidal/Apple music, as well as here on our
         website.
       </p>
-      <p>
+      <p data-aos="fade-in">
         Garizim is now moving into a new era. We look forward to being together
         again and create new music!
       </p>
     </div>
     <div class="ui container album">
-      <div class="left">
+      <div class="left" data-aos="fade-in">
         <img src="/images/albumcover.jpg" alt="" class="album-cover" />
       </div>
-      <div class="right">
+      <div class="right" data-aos="fade-in">
         <h2>Moments in Between</h2>
         <p>1. Our Time Was Not Enough To Grow Old Together</p>
         <p>2. Shabash!</p>
@@ -36,11 +38,25 @@
         <br />
 
         <div class="links">
-          <i class="fab fa-youtube fa-lg"></i>
-          <i class="fab fa-spotify fa-lg"></i>
-          <i class="fab fa-bandcamp fa-lg"></i>
-          <i class="fab fa-amazon fa-lg"></i>
-          <i class="fab fa-soundcloud fa-lg"></i>
+          <a
+            href="https://youtube.com/playlist?list=OLAK5uy_nsX0XvldTvh6GkeHUagX3twvNEynFNUzI"
+            ><i class="fab fa-youtube fa-lg"></i
+          ></a>
+          <a
+            href="https://open.spotify.com/album/43AwTLyEl1frgfDGzYBc1F?si=MWUtFkz9TouuQEtzhHj4Ww"
+            ><i class="fab fa-spotify fa-lg"></i
+          ></a>
+          <a
+            href="https://music.apple.com/ca/album/moments-in-between-ep/1611755467"
+            ><i class="fab fa-apple fa-lg"></i
+          ></a>
+          <a
+            href="https://music.amazon.com/albums/B09TFT2RV1?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=FI&ref=dm_sh_JQ9UoDucPhzGrcRMOAKO67jHQ"
+            ><i class="fab fa-amazon fa-lg"></i
+          ></a>
+          <a href="https://soundcloud.com/garizim"
+            ><i class="fab fa-soundcloud fa-lg"></i
+          ></a>
         </div>
       </div>
     </div>
@@ -96,9 +112,26 @@ p {
   width: 100%;
 }
 
+.links {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .links i {
-  font-size: 30px;
+  color: rgba(177, 119, 140, 0.8);
+  font-size: 34px;
   margin: 10px;
+  transition: all 200 ease;
+}
+
+.links i:hover {
+  transform: scale(1.15);
+  color: rgba(177, 119, 140, 1);
+}
+
+.links i:hover {
+  cursor: pointer;
 }
 
 .album-title {
@@ -117,5 +150,3 @@ p {
   line-height: 230%;
 }
 </style>
-
-https://www.youtube.com/watch?v=XOltNwJpiL4&list=OLAK5uy_nsX0XvldTvh6GkeHUagX3twvNEynFNUzI

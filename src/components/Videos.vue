@@ -1,6 +1,6 @@
 <template>
   <div class="ui container videos">
-    <div class="main-video">
+    <div class="main-video" data-aos="fade-in">
       <p class="video-title">{{ mainVideo.title }}</p>
       <p class="video-meta">{{ mainVideo.meta }}</p>
       <iframe
@@ -16,7 +16,12 @@
     </div>
 
     <div class="video-container">
-      <div v-for="video in videoArray" :key="video.link" class="video-wrapper">
+      <div
+        v-for="video in videoArray"
+        :key="video.link"
+        class="video-wrapper"
+        data-aos="fade-in"
+      >
         <p class="video-title">{{ video.title }}</p>
         <p class="video-meta">{{ video.meta }}</p>
         <iframe

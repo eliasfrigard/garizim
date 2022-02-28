@@ -1,8 +1,9 @@
 <template>
   <div class="wrapper">
-    <h2 class="quote-header">QUOTES</h2>
+    <h2 class="quote-header" data-aos="fade-in">QUOTES</h2>
     <div class="ui container quotes">
       <div
+        data-aos="fade-in"
         class="ui container quote"
         v-for="quote in quotesArray"
         :key="quote.id"
@@ -38,7 +39,7 @@ export default {
 <style scoped>
 .wrapper {
   text-align: center;
-  margin: 120px;
+  margin: 130px 0 160px 0;
 }
 
 .quote-header {
