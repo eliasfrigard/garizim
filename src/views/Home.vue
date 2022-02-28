@@ -41,6 +41,39 @@
       </div>
     </div>
     <hr />
+    <h3 id="so-me-title" class="welcome-title">SOCIAL MEDIA</h3>
+    <div class="ui container social-media">
+      <div
+        class="fb-page"
+        data-href="https://www.facebook.com/Garizimmusic"
+        data-tabs="timeline"
+        data-width="500"
+        data-height="600"
+        data-small-header="false"
+        data-adapt-container-width="true"
+        data-hide-cover="false"
+        data-show-facepile="true"
+      >
+        <blockquote
+          cite="https://www.facebook.com/Garizimmusic"
+          class="fb-xfbml-parse-ignore"
+        >
+          <a href="https://www.facebook.com/Garizimmusic">Garizim</a>
+        </blockquote>
+      </div>
+      <!-- Div -->
+      <div class="spotify-page">
+        <iframe
+          style="border-radius: 12px"
+          src="https://open.spotify.com/embed/playlist/0ed7GYbxtM9fmZ7FkRG8ii?utm_source=generator&theme=0"
+          width="100%"
+          height="600"
+          frameBorder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        ></iframe>
+      </div>
+    </div>
   </div>
   <div class="divider"></div>
   <div class="ui container content">
@@ -69,9 +102,42 @@ export default {
   data() {
     return {}
   },
+  created() {
+    window.addEventListener('scroll', this.onScroll)
+  },
   methods: {
     onScroll() {
-      console.log('on scroll')
+      const scrollHeight = Number.parseFloat(window.scrollY).toFixed(2)
+
+      this.setBackgroundImage(scrollHeight)
+    },
+    setBackgroundImage(height) {
+      const bandTitle = document.querySelector('#band-title')
+      console.log(bandTitle)
+
+      let backgroundImage = ''
+
+      if (height < 951) {
+        backgroundImage = '/images/Garizim2019-0979.jpg'
+        bandTitle.style.display = 'block'
+        // first image
+      } else if (height > 951 && height < 3456) {
+        backgroundImage = '/images/garizim_press_web.jpg'
+        bandTitle.style.display = 'none'
+        // second image
+      } else if (height > 3456 && height < 5404) {
+        backgroundImage = '/images/Garizim2019-0974_bw.jpg'
+        bandTitle.style.display = 'none'
+        // third image
+      } else {
+        backgroundImage =
+          '/images/69608686_10157410500941280_5649243090850938880_n.jpg'
+        bandTitle.style.display = 'none'
+        // fourth image
+      }
+
+      const home = document.querySelector('.home')
+      home.style.backgroundImage = `url(${backgroundImage})`
     },
   },
   components: {
@@ -138,8 +204,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 100px 0;
-  padding-bottom: 60px;
+  margin: 100px;
 }
 
 #welcome p,
@@ -159,7 +224,7 @@ export default {
 }
 
 .divider {
-  height: 75vh;
+  height: 85vh;
   width: 100%;
   background-color: transparent;
 }
@@ -184,5 +249,20 @@ export default {
   font-size: 35px;
   margin: 23px;
   opacity: 0.7;
+}
+.social-media {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 50px 0 150px 0;
+}
+
+.social-media div {
+  width: 500px;
+}
+
+#so-me-title {
+  font-size: 30px;
+  margin-top: 70px;
 }
 </style>

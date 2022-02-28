@@ -38,6 +38,7 @@ export default {
   data() {
     return {
       playerIsActive: false,
+      backgroundImage: '',
     }
   },
   created() {
@@ -49,6 +50,7 @@ export default {
 
       if (scrollHeight > 75) this.openPlayer()
     },
+
     reloadPage() {
       window.location.href = '/'
     },
@@ -124,5 +126,10 @@ export default {
 .so-me i {
   font-size: 28px;
   margin: 0 15px;
+}
+
+hr {
+  width: 70%;
+  opacity: 0.2;
 }
 </style>
