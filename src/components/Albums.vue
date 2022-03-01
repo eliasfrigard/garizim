@@ -32,6 +32,9 @@ import albums from '/albums.json'
 
 export default {
   name: 'Albums',
+  props: {
+    identifier: Number,
+  },
   components: {
     Album,
   },
@@ -42,6 +45,7 @@ export default {
   },
   async created() {
     albums.forEach((album) => {
+      if (this.identifier && album.id != this.identifier) return
       this.albums.push(album)
     })
   },

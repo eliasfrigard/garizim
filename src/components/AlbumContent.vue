@@ -20,55 +20,15 @@
         again and create new music!
       </p>
     </div>
-    <div class="ui container album">
-      <div class="left" data-aos="fade-in">
-        <img src="/garizim/images/albumcover.jpg" alt="" class="album-cover" />
-      </div>
-      <div class="right" data-aos="fade-in">
-        <h2>Moments in Between</h2>
-        <p>1. Our Time Was Not Enough To Grow Old Together</p>
-        <p>2. Shabash!</p>
-        <p>3. What Thoughts Are Made Of</p>
-        <p>4. Moments in Between</p>
-        <p>5. Stories from the End</p>
-        <br />
-        <p>Mixed & Mastered by Lars-Emil Öjeberget</p>
-        <p>Recorded at Kråktjärn Studio</p>
-        <p>Photo by Sona Hellman</p>
-        <br />
-
-        <div class="links">
-          <a
-            href="https://youtube.com/playlist?list=OLAK5uy_nsX0XvldTvh6GkeHUagX3twvNEynFNUzI"
-            ><i class="fab fa-youtube fa-lg"></i
-          ></a>
-          <a
-            href="https://open.spotify.com/album/43AwTLyEl1frgfDGzYBc1F?si=MWUtFkz9TouuQEtzhHj4Ww"
-            ><i class="fab fa-spotify fa-lg"></i
-          ></a>
-          <a
-            href="https://music.apple.com/ca/album/moments-in-between-ep/1611755467"
-            ><i class="fab fa-apple fa-lg"></i
-          ></a>
-          <a
-            href="https://music.amazon.com/albums/B09TFT2RV1?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=FI&ref=dm_sh_JQ9UoDucPhzGrcRMOAKO67jHQ"
-            ><i class="fab fa-amazon fa-lg"></i
-          ></a>
-          <a href="https://soundcloud.com/garizim"
-            ><i class="fab fa-soundcloud fa-lg"></i
-          ></a>
-        </div>
-      </div>
-    </div>
+    <Albums identifier="1" />
   </div>
-  <Albums />
 </template>
 
 <script>
 import Albums from '@/components/Albums.vue'
 
 export default {
-  name: 'Album',
+  name: 'AlbumContent',
   components: {
     Albums,
   },
@@ -81,7 +41,7 @@ export default {
   letter-spacing: 0.5px;
   word-spacing: 2px;
   line-height: 210%;
-  padding: 100px 0 170px 0;
+  padding: 100px 0 100px 0;
 }
 
 .album {

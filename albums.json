@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "title": "Moments in Between",
     "release": "2022",
     "cover": "/images/albumcover.jpg",
@@ -26,6 +27,7 @@
     "bandcamp": ""
   },
   {
+    "id": 2,
     "title": "See The Birds Are Coming",
     "release": "2015",
     "cover": "/images/12486040_10153778338216280_4596796149541445082_o.jpg",
@@ -55,6 +57,7 @@
     "bandcamp": ""
   },
   {
+    "id": 3,
     "title": "Fri",
     "release": "2011",
     "cover": "/images/R-12647255-1539277945-4612.jpg",

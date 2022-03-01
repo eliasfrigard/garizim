@@ -62,10 +62,11 @@
         ></a>
       </div>
     </div>
-    <hr />
-    <h3 id="so-me-title" class="welcome-title" data-aos="fade-in">
-      SOCIAL MEDIA
-    </h3>
+    <div class="ui container">
+      <h2 id="so-me-title" class="welcome-title" data-aos="fade-in">
+        SOCIAL MEDIA
+      </h2>
+    </div>
     <div class="ui container social-media">
       <div
         data-aos="fade-in"
@@ -112,8 +113,11 @@
   </div>
   <div class="divider"></div>
 
-  <div class="ui container content">
-    <Videos />
+  <div class="content">
+    <div class="ui container videos">
+      <h2>VIDEOS</h2>
+      <Videos class="video-component" />
+    </div>
   </div>
   <div></div>
 </template>
@@ -148,17 +152,17 @@ export default {
       let backgroundImage = ''
 
       if (height < first) {
-        backgroundImage = '/garizim/images/webp/Garizim2019-0979.webp'
+        backgroundImage = '/images/webp/Garizim2019-0979.webp'
         bandTitle.style.display = 'block'
       } else if (height > first && height < second) {
-        backgroundImage = '/garizim/images/webp/garizim_press_web.webp'
+        backgroundImage = '/images/webp/garizim_press_web.webp'
         bandTitle.style.display = 'none'
       } else if (height > second && height < third) {
-        backgroundImage = '/garizim/images/webp/Garizim2019-0974_bw.webp'
+        backgroundImage = '/images/webp/Garizim2019-0974_bw.webp'
         bandTitle.style.display = 'none'
       } else {
         backgroundImage =
-          '/garizim/images/webp/69608686_10157410500941280_5649243090850938880_n.webp'
+          '/images/webp/69608686_10157410500941280_5649243090850938880_n.webp'
         bandTitle.style.display = 'none'
       }
 
@@ -181,11 +185,11 @@ export default {
   left: 0;
   height: 100vh;
   width: 100%;
-  background-image: url('/garizim/images/webp/Garizim2019-0979.webp');
-  content: url('/garizim/images/webp/Garizim2019-0979.webp')
-    url('/garizim/images/webp/garizim_press_web.webp')
-    url('/garizim/images/webp/Garizim2019-0974_bw.webp')
-    url('/garizim/images/webp/69608686_10157410500941280_5649243090850938880_n.webp');
+  background-image: url('/images/webp/Garizim2019-0979.webp');
+  content: url('/images/webp/Garizim2019-0979.webp')
+    url('/images/webp/garizim_press_web.webp')
+    url('/images/webp/Garizim2019-0974_bw.webp')
+    url('/images/webp/69608686_10157410500941280_5649243090850938880_n.webp');
   background-size: cover;
   background-position: center;
 }
@@ -234,7 +238,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 100px 0 70px 0;
+  margin: 100px 0 50px 0;
 }
 
 #welcome p,
@@ -250,7 +254,7 @@ export default {
 
 .welcome-title {
   font-size: 60px;
-  margin: 20px 0;
+  margin: 20px 0 50px 0;
 }
 
 #welcome-meta p {
@@ -270,7 +274,7 @@ export default {
   left: 125px;
   justify-content: center;
   align-items: center;
-  transform: translateY(-50px);
+  transform: translateY(-20px);
   cursor: pointer;
 
   color: rgba(141, 183, 222, 1);
@@ -292,7 +296,7 @@ export default {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin: 50px 0 150px 0;
+  margin: 15px 0 150px 0;
 }
 
 .social-media div {
@@ -300,7 +304,15 @@ export default {
 }
 
 #so-me-title {
-  font-size: 30px;
   margin-top: 70px;
+  font-size: 40px;
+}
+
+.video-component {
+  padding: 100px 0 150px 0;
+}
+
+.videos {
+  padding: 80px 0;
 }
 </style>
