@@ -79,10 +79,10 @@ export default {
 .video-wrapper {
   flex-wrap: wrap;
   overflow: hidden;
+  margin-top: 30px;
 }
 
 .video-container {
-  margin: 30px 0;
   font-family: 'Lato', sans-serif;
   text-align: center;
   letter-spacing: 0.5px;

@@ -103,7 +103,7 @@
   </div>
   <div class="divider"></div>
   <div class="ui container content">
-    <Album />
+    <AlbumContent />
   </div>
   <div class="divider"></div>
 
@@ -121,7 +121,7 @@
 <script>
 import Quotes from '@/components/Quotes.vue'
 import Videos from '@/components/Videos.vue'
-import Album from '@/components/Album.vue'
+import AlbumContent from '@/components/AlbumContent.vue'
 
 export default {
   name: 'Home',
@@ -169,7 +169,7 @@ export default {
   components: {
     Quotes,
     Videos,
-    Album,
+    AlbumContent,
   },
 }
 </script>
