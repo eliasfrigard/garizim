@@ -6,40 +6,53 @@
       </div>
       <div class="right">
         <div id="title">
-          <h2>{{ title }}</h2>
-          <p id="year">({{ release }})</p>
+          <h4>{{ title }}</h4>
+          <div class="links">
+            <a v-if="youtube" :href="youtube" target="_blank"
+              ><i class="fab fa-youtube fa-lg"></i
+            ></a>
+            <a v-if="spotify" :href="spotify" target="_blank"
+              ><i class="fab fa-spotify fa-lg"></i
+            ></a>
+            <a v-if="apple" :href="apple" target="_blank"
+              ><i class="fab fa-apple fa-lg"></i
+            ></a>
+            <a v-if="amazon" :href="amazon" target="_blank"
+              ><i class="fab fa-amazon fa-lg"></i
+            ></a>
+            <a v-if="soundcloud" :href="soundcloud" target="_blank"
+              ><i class="fab fa-soundcloud fa-lg"></i
+            ></a>
+            <a v-if="bandcamp" :href="bandcamp" target="_blank"
+              ><i class="fab fa-bandcamp fa-lg"></i
+            ></a>
+          </div>
+          <!--           <p id="year">{{ release }}</p>
+ -->
         </div>
         <p v-for="(track, index) in tracks" :key="index">
-          {{ index + 1 }}. {{ track }}
+          {{ index + 1 }}. <b>{{ track }}</b>
         </p>
         <p id="meta" v-if="meta">{{ meta }}</p>
         <br />
-        <p>Mixed by {{ mix }}</p>
-        <p>Mastered by {{ master }}</p>
-        <p>Recorded by {{ engineer }} / {{ studio }}</p>
-        <p>Photos by {{ photos }}</p>
-        <br />
-
-        <div class="links">
-          <a v-if="youtube" :href="youtube" target="_blank"
-            ><i class="fab fa-youtube fa-lg"></i
-          ></a>
-          <a v-if="spotify" :href="spotify" target="_blank"
-            ><i class="fab fa-spotify fa-lg"></i
-          ></a>
-          <a v-if="apple" :href="apple" target="_blank"
-            ><i class="fab fa-apple fa-lg"></i
-          ></a>
-          <a v-if="amazon" :href="amazon" target="_blank"
-            ><i class="fab fa-amazon fa-lg"></i
-          ></a>
-          <a v-if="soundcloud" :href="soundcloud" target="_blank"
-            ><i class="fab fa-soundcloud fa-lg"></i
-          ></a>
-          <a v-if="bandcamp" :href="bandcamp" target="_blank"
-            ><i class="fab fa-bandcamp fa-lg"></i
-          ></a>
-        </div>
+        <p>
+          Released in <b>{{ release }}</b>
+        </p>
+        <p>
+          Mixed by <b>{{ mix }}</b>
+        </p>
+        <p>
+          Mastered by <b>{{ master }}</b>
+        </p>
+        <p>
+          Recorded by <b>{{ engineer }}</b> / <b>{{ studio }}</b>
+        </p>
+        <p v-if="label">
+          Released by <b>{{ label }}</b>
+        </p>
+        <p>
+          Photos by <b>{{ photos }}</b>
+        </p>
       </div>
     </div>
   </div>
@@ -102,8 +115,8 @@ export default {
   flex-direction: column;
 }
 
-h2 {
-  font-size: 22px;
+h4 {
+  font-size: 18px;
   margin: 0;
 }
 
@@ -124,8 +137,8 @@ p {
 
 .links i {
   color: rgba(177, 119, 140, 0.8);
-  font-size: 30px;
-  margin: 0 10px;
+  font-size: 22px;
+  margin-left: 12px;
   transition: all 200 ease;
 }
 
@@ -145,14 +158,19 @@ p {
 
 #title {
   display: flex;
-  align-items: flex-end;
-  margin-bottom: 10px;
+  align-items: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom-width: 1px;
+  padding-bottom: 10px;
+  width: 90%;
 }
 
 #title p {
   margin-left: 10px;
-  font-size: 16px;
+  font-size: 14px;
   opacity: 0.8;
-  margin-bottom: 1px;
+  margin-bottom: 0px;
 }
 </style>

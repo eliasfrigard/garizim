@@ -1,9 +1,9 @@
 <template>
   <div class="wrapper">
     <div class="ui container album-header">
-      <h2 class="album-title" data-aos="fade-in">
+      <h3 class="album-title" data-aos="fade-in">
         NEW MUSIC RELEASED IN MARCH 2022!
-      </h2>
+      </h3>
       <p data-aos="fade-in">
         During four days in the summer of 2018, Garizim recorded some new music
         together. It feels like a very long time ago. The plan was to release

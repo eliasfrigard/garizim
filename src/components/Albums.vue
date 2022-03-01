@@ -1,6 +1,7 @@
 <template>
   <div>
     <Album
+      data-aos="fade-in"
       v-for="album in albums"
       :key="album.title"
       :title="album.title"

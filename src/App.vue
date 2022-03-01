@@ -135,9 +135,23 @@ export default {
 
 hr {
   width: 70%;
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
-a {
+h2 {
+  text-align: center;
+  font-size: 60px;
+  line-height: 230%;
+  letter-spacing: 5px;
+  word-spacing: 1px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom-width: 1px;
+  padding-bottom: 3px;
+  width: 100%;
+}
+
+h3 {
+  letter-spacing: 3px;
 }
 </style>

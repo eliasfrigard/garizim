@@ -2,7 +2,7 @@
   {
     "title": "Moments in Between",
     "release": "2022",
-    "cover": "images/albumcover.jpg",
+    "cover": "/images/albumcover.jpg",
     "engineer": "Fredrik Bengtsson",
     "studio": "Kråktjärn Studio",
     "label": "",
@@ -28,7 +28,7 @@
   {
     "title": "See The Birds Are Coming",
     "release": "2015",
-    "cover": "images/12486040_10153778338216280_4596796149541445082_o.jpg",
+    "cover": "/images/12486040_10153778338216280_4596796149541445082_o.jpg",
     "engineer": "Petter Berndalen",
     "studio": "Playing With Music",
     "label": "Gammalthea",
@@ -57,7 +57,7 @@
   {
     "title": "Fri",
     "release": "2011",
-    "cover": "images/R-12647255-1539277945-4612.jpg",
+    "cover": "/images/R-12647255-1539277945-4612.jpg",
     "engineer": "Fredrik Bengtsson",
     "studio": "Lärarbostädernas Studio",
     "label": "Gammalthea",

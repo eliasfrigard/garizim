@@ -66,7 +66,6 @@ export default {
 
 <style scoped>
 .videos {
-  margin: 100px 0 150px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
