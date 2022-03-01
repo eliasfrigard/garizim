@@ -22,7 +22,7 @@
     </div>
     <div class="ui container album">
       <div class="left" data-aos="fade-in">
-        <img src="/images/albumcover.jpg" alt="" class="album-cover" />
+        <img src="/garizim/images/albumcover.jpg" alt="" class="album-cover" />
       </div>
       <div class="right" data-aos="fade-in">
         <h2>Moments in Between</h2>

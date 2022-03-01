@@ -148,17 +148,17 @@ export default {
       let backgroundImage = ''
 
       if (height < first) {
-        backgroundImage = '/images/webp/Garizim2019-0979.webp'
+        backgroundImage = '/garizim/images/webp/Garizim2019-0979.webp'
         bandTitle.style.display = 'block'
       } else if (height > first && height < second) {
-        backgroundImage = '/images/webp/garizim_press_web.webp'
+        backgroundImage = '/garizim/images/webp/garizim_press_web.webp'
         bandTitle.style.display = 'none'
       } else if (height > second && height < third) {
-        backgroundImage = '/images/webp/Garizim2019-0974_bw.webp'
+        backgroundImage = '/garizim/images/webp/Garizim2019-0974_bw.webp'
         bandTitle.style.display = 'none'
       } else {
         backgroundImage =
-          '/images/webp/69608686_10157410500941280_5649243090850938880_n.webp'
+          '/garizim/images/webp/69608686_10157410500941280_5649243090850938880_n.webp'
         bandTitle.style.display = 'none'
       }
 
@@ -181,11 +181,11 @@ export default {
   left: 0;
   height: 100vh;
   width: 100%;
-  background-image: url('/images/webp/Garizim2019-0979.webp');
-  content: url('/images/webp/Garizim2019-0979.webp')
-    url('/images/webp/garizim_press_web.webp')
-    url('/images/webp/Garizim2019-0974_bw.webp')
-    url('/images/webp/69608686_10157410500941280_5649243090850938880_n.webp');
+  background-image: url('/garizim/images/webp/Garizim2019-0979.webp');
+  content: url('/garizim/images/webp/Garizim2019-0979.webp')
+    url('/garizim/images/webp/garizim_press_web.webp')
+    url('/garizim/images/webp/Garizim2019-0974_bw.webp')
+    url('/garizim/images/webp/69608686_10157410500941280_5649243090850938880_n.webp');
   background-size: cover;
   background-position: center;
 }
