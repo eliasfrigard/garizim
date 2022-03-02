@@ -47,4 +47,9 @@ const router = createRouter({
   routes,
 })
 
+router.beforeEach((to, from, next) => {
+  document.title = 'Garizim | ' + to.name
+  next()
+})
+
 export default router

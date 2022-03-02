@@ -10,7 +10,7 @@
       >
         <p class="quote-text">"{{ quote.text }}"</p>
         <p class="quote-name">{{ quote.author }}</p>
-        <a class="quote-link" :href="'https://' + quote.link" target="_blank">{{
+        <a class="quote-link" :href="quote.link" target="_blank">{{
           quote.link
         }}</a>
       </div>
@@ -44,7 +44,6 @@ export default {
 
 .quote-header {
   font-size: 60px;
-  letter-spacing: 0.5px;
   word-spacing: 2px;
   line-height: 210%;
 }

@@ -152,6 +152,6 @@ h2 {
 }
 
 h3 {
-  letter-spacing: 3px;
+  letter-spacing: 2.5px;
 }
 </style>

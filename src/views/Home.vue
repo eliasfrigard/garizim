@@ -5,7 +5,8 @@
   </div>
   <div class="ui container content">
     <div id="welcome" class="ui container">
-      <h2 class="welcome-title" data-aos="fade-in">GARIZIM - MODERN FOLK</h2>
+      <h2 class="welcome-title" data-aos="fade-in">GARIZIM</h2>
+      <h3 class="welcome-subtitle">PROGRESSIVE FOLK MUSIC FROM SCANDINAVIA</h3>
       <p data-aos="fade-in">
         Garizim is a colorful live experience taking the listener on musical
         journeys. With the unique line-up of hurdy-gurdy, saxophones and double
@@ -37,35 +38,39 @@
           <br />+46(0)736750310 - Johannes<br />+46(0)706691374 - Elias
         </p>
       </div>
-      <div class="garizim-links">
-        <a href="https://www.facebook.com/Garizimmusic">
-          <i class="fab fa-facebook fa-lg" data-aos="slide-right"></i
-        ></a>
-        <a
-          href="https://open.spotify.com/album/43AwTLyEl1frgfDGzYBc1F?si=MWUtFkz9TouuQEtzhHj4Ww"
-          ><i class="fab fa-spotify fa-lg" data-aos="slide-right"></i
-        ></a>
-        <a
-          href="https://music.apple.com/ca/album/moments-in-between-ep/1611755467"
-          ><i class="fab fa-apple fa-lg" data-aos="slide-right"></i
-        ></a>
-        <a
-          href="https://music.amazon.com/albums/B09TFT2RV1?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=FI&ref=dm_sh_JQ9UoDucPhzGrcRMOAKO67jHQ"
-          ><i class="fab fa-amazon fa-lg" data-aos="slide-right"></i
-        ></a>
-        <a
-          href="https://youtube.com/playlist?list=OLAK5uy_nsX0XvldTvh6GkeHUagX3twvNEynFNUzI"
-          ><i class="fab fa-youtube fa-lg" data-aos="slide-right"></i
-        ></a>
-        <a href="https://soundcloud.com/garizim"
-          ><i class="fab fa-soundcloud fa-lg" data-aos="slide-right"></i
-        ></a>
-      </div>
     </div>
     <div class="ui container">
       <h2 id="so-me-title" class="welcome-title" data-aos="fade-in">
         SOCIAL MEDIA
       </h2>
+    </div>
+    <div class="garizim-links" data-aos="fade-in">
+      <a href="https://www.facebook.com/Garizimmusic" target="_blank">
+        <i class="fab fa-facebook fa-lg"></i
+      ></a>
+      <a
+        href="https://open.spotify.com/album/43AwTLyEl1frgfDGzYBc1F?si=MWUtFkz9TouuQEtzhHj4Ww"
+        target="_blank"
+        ><i class="fab fa-spotify fa-lg"></i
+      ></a>
+      <a
+        href="https://music.apple.com/ca/album/moments-in-between-ep/1611755467"
+        target="_blank"
+        ><i class="fab fa-apple fa-lg"></i
+      ></a>
+      <a
+        href="https://music.amazon.com/albums/B09TFT2RV1?marketplaceId=A3K6Y4MI8GDYMT&musicTerritory=FI&ref=dm_sh_JQ9UoDucPhzGrcRMOAKO67jHQ"
+        target="_blank"
+        ><i class="fab fa-amazon fa-lg"></i
+      ></a>
+      <a
+        href="https://youtube.com/playlist?list=OLAK5uy_nsX0XvldTvh6GkeHUagX3twvNEynFNUzI"
+        target="_blank"
+        ><i class="fab fa-youtube fa-lg"></i
+      ></a>
+      <a href="https://soundcloud.com/garizim" target="_blank"
+        ><i class="fab fa-soundcloud fa-lg"></i
+      ></a>
     </div>
     <div class="ui container social-media">
       <div
@@ -215,11 +220,7 @@ export default {
   letter-spacing: 5px;
   color: transparent;
   background: rgb(141, 183, 222);
-  background: linear-gradient(
-    90deg,
-    rgba(141, 183, 222, 0.8) 0%,
-    rgba(177, 119, 140, 0.8) 100%
-  );
+  background: linear-gradient(90deg, #8db7decc 0%, #b1778ccc 100%);
   background-clip: text;
 }
 
@@ -248,13 +249,16 @@ export default {
   text-align: center;
   font-size: 18px;
   line-height: 230%;
-  letter-spacing: 0.5px;
   word-spacing: 1px;
 }
 
 .welcome-title {
   font-size: 60px;
-  margin: 20px 0 50px 0;
+  margin: 20px 0 30px 0;
+}
+
+.welcome-subtitle {
+  margin-bottom: 30px;
 }
 
 #welcome-meta p {
@@ -269,27 +273,25 @@ export default {
 
 .garizim-links {
   display: flex;
-  flex-direction: column;
-  position: absolute;
-  left: 125px;
   justify-content: center;
   align-items: center;
   transform: translateY(-20px);
   cursor: pointer;
+  margin: 0 0 20px 0;
 
-  color: rgba(141, 183, 222, 1);
+  color: #8db7de;
   transition: all 100ms ease;
 }
 
 .garizim-links i:hover {
-  transform: scale(1.15);
+  transform: scale(1.2);
   cursor: pointer;
   opacity: 1;
 }
 
 .garizim-links i {
-  font-size: 35px;
-  margin: 23px;
+  font-size: 28px;
+  margin: 20px;
   opacity: 0.7;
 }
 .social-media {
@@ -314,5 +316,11 @@ export default {
 
 .videos {
   padding: 80px 0;
+}
+
+@media screen and (max-width: 1580px) {
+  .garizim-links {
+    display: none;
+  }
 }
 </style>
