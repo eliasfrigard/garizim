@@ -72,9 +72,8 @@
         ><i class="fab fa-soundcloud fa-lg"></i
       ></a>
     </div>
-    <div class="ui container social-media">
+    <div class="ui container social-media" data-aos="fade-in">
       <div
-        data-aos="fade-in"
         class="fb-page"
         data-href="https://www.facebook.com/Garizimmusic"
         data-tabs="timeline"
@@ -95,7 +94,6 @@
       <!-- Div -->
       <div class="spotify-page">
         <iframe
-          data-aos="fade-in"
           style="border-radius: 12px"
           src="https://open.spotify.com/embed/playlist/0ed7GYbxtM9fmZ7FkRG8ii?utm_source=generator&theme=0"
           width="100%"
