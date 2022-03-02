@@ -10,7 +10,7 @@
       <p data-aos="fade-in">
         During four days in the summer of 2018, Garizim recorded some new music
         together. It feels like a very long time ago. The plan was to release
-        the our new creation as soon as possible, but something happened, and
+        our new creation as soon as possible, but something happened, and
         everything was on hold for a while. Finally, it is time to share this
         new & old music to the world, to our friends and listeners. Our new EP
         "Moments in Between" contains five tracks with original music composed
