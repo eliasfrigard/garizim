@@ -1,6 +1,8 @@
 <template>
   <div class="wrapper">
-    <h2 class="quote-header" data-aos="fade-in">QUOTES</h2>
+    <div class="ui container">
+      <h2 class="quote-header" data-aos="fade-in">QUOTES</h2>
+    </div>
     <div class="ui container quotes">
       <div
         data-aos="fade-in"
@@ -39,7 +41,7 @@ export default {
 <style scoped>
 .wrapper {
   text-align: center;
-  margin: 130px 0 160px 0;
+  margin: 130px 0;
 }
 
 .quote-header {
@@ -93,7 +95,7 @@ export default {
   }
 
   .quote-text {
-    font-size: 20px;
+    font-size: 19px;
   }
 }
 </style>

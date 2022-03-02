@@ -1,8 +1,11 @@
 <template>
   <div class="wrapper">
     <div class="ui container album-header">
+      <div class="ui container">
+        <h2>ALBUMS</h2>
+      </div>
       <h3 class="album-title" data-aos="fade-in">
-        NEW MUSIC RELEASED IN MARCH 2022!
+        NEW ALBUM <i>"MOMENTS IN BETWEEN"</i> OUT NOW!
       </h3>
       <p data-aos="fade-in">
         During four days in the summer of 2018, Garizim recorded some new music
@@ -20,7 +23,7 @@
         again and create new music!
       </p>
     </div>
-    <Albums identifier="1" />
+    <Albums />
   </div>
 </template>
 
@@ -42,10 +45,6 @@ export default {
   word-spacing: 2px;
   line-height: 210%;
   padding: 100px 0;
-}
-
-h2 {
-  font-size: 22px;
 }
 
 p {
@@ -80,12 +79,12 @@ p {
 }
 
 .album-title {
-  font-size: 40px;
+  font-size: 30px;
   margin: 40px 0;
 }
 
 .album-header {
-  margin: 60px 0;
+  margin: 0;
   text-align: center;
   line-height: 210%;
 }
@@ -98,6 +97,14 @@ p {
 @media screen and (max-width: 1200px) {
   .wrapper {
     padding: 20px 0 0 0;
+  }
+
+  .album-header p {
+    font-size: 19px;
+  }
+
+  .album-title {
+    font-size: 26px;
   }
 }
 </style>

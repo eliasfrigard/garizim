@@ -172,6 +172,10 @@ p {
 }
 
 @media screen and (max-width: 1200px) {
+  .wrapper {
+    margin: 35px 0;
+  }
+
   .album {
     flex-direction: column;
     height: 100%;

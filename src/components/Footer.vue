@@ -95,6 +95,11 @@ export default {
 </script>
 
 <style scoped>
+a,
+h4 {
+  color: black !important;
+}
+
 .available-img {
   max-height: 30px;
   margin: 0 20px 20px 0;
@@ -102,7 +107,12 @@ export default {
 }
 
 #footer {
-  padding: 80px;
+  font-family: 'Lato', sans-serif;
+
+  line-height: 230%;
+  word-spacing: 1px;
+
+  padding: 100px !important;
   background-color: #e8eae9;
   bottom: 0;
   color: black;

@@ -104,12 +104,13 @@
 
     <div class="song-container">
       <div class="ui container song-list">
+        <h2 id="songlist-header">Songlist</h2>
         <table class="song-table">
           <tr>
-            <th>#</th>
+            <th class="id-header">#</th>
             <th>Title</th>
             <th>Album</th>
-            <th>Artist</th>
+            <th class="artist-header">Artist</th>
             <!--             <th class="composer-header">Composer</th>
  -->
             <th class="length-header">Length</th>
@@ -130,6 +131,17 @@
             <td class="song-length">{{ song.length }}</td>
           </tr>
         </table>
+
+        <div class="song-table-mobile">
+          <div
+            v-for="(song, index) in songList"
+            :key="index"
+            @click="changeTrack(index)"
+          >
+            <p class="mobile-song-title">{{ song.title }}</p>
+            <p class="mobile-song-meta">{{ song.length }}, {{ song.album }}</p>
+          </div>
+        </div>
         <div class="mobile-progress" v-if="mobile">
           <div class="music-progress-container" @click="setProgress">
             <div class="music-progress"></div>
@@ -304,6 +316,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+h2 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .player {
   font-family: 'Lato', sans-serif;
 
@@ -385,7 +401,7 @@ export default {
   width: 100%;
   display: none;
   background-color: #e8eae9;
-  padding: 50px;
+  padding: 30px;
   color: rgb(0, 0, 0);
 }
 
@@ -409,7 +425,8 @@ td {
   font-size: 16px;
 }
 
-.data-row:hover {
+.data-row:hover,
+.song-table-mobile div:hover {
   background-color: rgb(141, 183, 222, 0.2);
   cursor: pointer;
 }
@@ -458,11 +475,17 @@ td {
   display: none;
 }
 
-@media screen and (max-width: 992px) {
-  .music-info {
-    display: none;
-  }
+#songlist-header {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
 
+.song-table-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
   .audio-controls {
     width: 35%;
   }
@@ -482,6 +505,9 @@ td {
 
   .song-container {
     justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 25px 5px;
   }
 
   .mobile-progress .music-progress-container {
@@ -489,11 +515,51 @@ td {
     margin: 20px 0 0;
   }
 
+  .music-info,
+  .id-header,
+  .song-id,
+  .artist-header,
+  .song-artist,
   .song-composer,
   .song-length,
   .composer-header,
-  .length-header {
+  .length-header,
+  .song-table {
     display: none;
+  }
+
+  .song-table-mobile {
+    display: block;
+  }
+
+  .song-table-mobile div {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 15px;
+  }
+
+  .mobile-song-title {
+    letter-spacing: 0.5px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  .mobile-song-meta {
+    letter-spacing: 1px;
+    font-size: 16px;
+    opacity: 0.8;
+    margin: 0;
+    margin-top: 7px;
+  }
+
+  .song-table-mobile div:last-child {
+    border-bottom: 0;
+  }
+
+  h2 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    /*     text-align: left;
+    padding-left: 15px; */
   }
 }
 </style>

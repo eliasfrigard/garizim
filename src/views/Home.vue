@@ -122,7 +122,6 @@
       <Videos class="video-component" />
     </div>
   </div>
-  <div></div>
 </template>
 
 <script>
@@ -237,7 +236,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 100px 0 50px 0;
+  margin: 70px 0 0 0;
 }
 
 #welcome p,
@@ -337,8 +336,9 @@ export default {
   }
 
   #welcome {
-    margin: 50px 0;
+    margin: 25px 0 0 0;
     text-align: center;
+    font-size: 19px;
   }
 
   .garizim-links i {

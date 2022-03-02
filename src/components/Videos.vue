@@ -128,12 +128,17 @@ export default {
     width: 100%;
   }
 
+  .main-video {
+    margin-bottom: 5px;
+  }
+
   .main-video iframe {
     height: 600px;
   }
 
   .video-wrapper {
     margin-top: 10px;
+    margin-bottom: 5px;
   }
 }
 </style>
