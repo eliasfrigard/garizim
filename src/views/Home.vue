@@ -121,6 +121,13 @@
       <h2>VIDEOS</h2>
       <Videos class="video-component" />
     </div>
+    <div class="copyright">
+      <p><b>Copyright 2022 © Garizim Music</b></p>
+      <p>
+        Website Design by
+        <b><a href="mailto:elias_frigard@hotmail.com">Elias Frigård</a></b>
+      </p>
+    </div>
   </div>
 </template>
 
@@ -152,24 +159,32 @@ export default {
       const third = contents[2].offsetTop
 
       let backgroundImage = ''
+      let backgroundPosition = ''
 
       if (height < first) {
         backgroundImage = '/images/webp/Garizim2019-0979.webp'
+        backgroundPosition = '80%'
         bandTitle.style.display = 'block'
       } else if (height > first && height < second) {
-        backgroundImage = '/images/webp/garizim_press_web.webp'
+        backgroundImage = '/images/webp/Garizim2019-0893_2.webp'
+        backgroundPosition = '84%'
         bandTitle.style.display = 'none'
       } else if (height > second && height < third) {
         backgroundImage = '/images/webp/Garizim2019-0974_bw.webp'
+        backgroundPosition = '56%'
         bandTitle.style.display = 'none'
       } else {
         backgroundImage =
           '/images/webp/69608686_10157410500941280_5649243090850938880_n.webp'
+        backgroundPosition = '70%'
         bandTitle.style.display = 'none'
       }
 
+      console.log(backgroundPosition)
+
       const home = document.querySelector('.home')
       home.style.backgroundImage = `url(${backgroundImage})`
+      home.style.backgroundPosition = backgroundPosition
     },
   },
   components: {
@@ -181,6 +196,15 @@ export default {
 </script>
 
 <style scoped>
+.copyright {
+  margin-bottom: 130px;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  text-align: center;
+}
+
 .home {
   position: fixed;
   bottom: 0;
@@ -189,7 +213,7 @@ export default {
   width: 100%;
   background-image: url('/images/webp/Garizim2019-0979.webp');
   content: url('/images/webp/Garizim2019-0979.webp')
-    url('/images/webp/garizim_press_web.webp')
+    url('/images/webp/Garizim2019-0893_2.webp')
     url('/images/webp/Garizim2019-0974_bw.webp')
     url('/images/webp/69608686_10157410500941280_5649243090850938880_n.webp');
   background-size: cover;
@@ -312,10 +336,14 @@ export default {
 }
 
 .videos {
-  padding: 80px 0;
+  padding: 80px 0 40px 0;
 }
 
 @media screen and (max-width: 1200px) {
+  .home {
+    background-position: 80%;
+  }
+
   .content {
     margin-left: 0 !important;
     margin-right: 0 !important;
@@ -352,7 +380,7 @@ export default {
   }
 
   .videos {
-    padding: 40px 0 60px 0;
+    padding: 40px 0;
   }
 }
 </style>

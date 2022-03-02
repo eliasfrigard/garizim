@@ -14,7 +14,7 @@
         everything was on hold for a while. Finally, it is time to share this
         new & old music to the world, to our friends and listeners. Our new EP
         "Moments in Between" contains five tracks with original music composed
-        by Garizim. You can find the "Moments in Between" on digital streaming
+        by Garizim. You can find "Moments in Between" on digital streaming
         platforms such as Spotify/Tidal/Apple music, as well as here on our
         website.
       </p>
