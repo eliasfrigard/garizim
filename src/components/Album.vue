@@ -107,9 +107,6 @@ export default {
   height: 100%;
   display: flex;
   justify-content: center;
-}
-
-.right {
   padding-left: 50px;
   display: flex;
   flex-direction: column;
@@ -172,5 +169,25 @@ p {
   font-size: 14px;
   opacity: 0.8;
   margin-bottom: 0px;
+}
+
+@media screen and (max-width: 1200px) {
+  .album {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .left {
+    width: 100%;
+  }
+  .right {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+  }
 }
 </style>

@@ -118,4 +118,22 @@ export default {
 .main-video .video-meta {
   font-size: 16px;
 }
+
+@media screen and (max-width: 1200px) {
+  .main-video,
+  .main-video iframe,
+  .video-wrapper,
+  .video-container,
+  .video-container iframe {
+    width: 100%;
+  }
+
+  .main-video iframe {
+    height: 600px;
+  }
+
+  .video-wrapper {
+    margin-top: 10px;
+  }
+}
 </style>

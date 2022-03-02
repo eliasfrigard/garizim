@@ -41,28 +41,7 @@ export default {
   letter-spacing: 0.5px;
   word-spacing: 2px;
   line-height: 210%;
-  padding: 100px 0 100px 0;
-}
-
-.album {
-  display: flex;
-  justify-content: space-between;
-  height: 557.86px;
-}
-
-.left,
-.right {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.right {
-  padding-top: 25px;
-  padding-left: 50px;
-  display: flex;
-  flex-direction: column;
+  padding: 100px 0;
 }
 
 h2 {
@@ -114,5 +93,11 @@ p {
 .album-header p {
   font-size: 16px;
   line-height: 230%;
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    padding: 20px 0 0 0;
+  }
 }
 </style>

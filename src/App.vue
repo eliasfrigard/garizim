@@ -153,5 +153,6 @@ h2 {
 
 h3 {
   letter-spacing: 2.5px;
+  line-height: 200%;
 }
 </style>

@@ -79,13 +79,21 @@ export default {
 }
 
 @media screen and (max-width: 992px) {
+  .wrapper {
+    margin: 50px 0;
+  }
+
+  .quote {
+    margin: 30px 0;
+  }
+
   .quotes {
     flex-direction: column;
     width: 100%;
   }
 
   .quote-text {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
 </style>

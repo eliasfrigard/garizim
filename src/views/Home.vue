@@ -316,9 +316,43 @@ export default {
   padding: 80px 0;
 }
 
-@media screen and (max-width: 1580px) {
-  .garizim-links {
-    display: none;
+@media screen and (max-width: 1200px) {
+  .content {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .social-media {
+    flex-direction: column-reverse;
+    margin: 15px 0;
+  }
+
+  .social-media div {
+    max-width: 95%;
+    margin: 0 0 50px 0;
+  }
+
+  .fb-page {
+    max-width: 95%;
+  }
+
+  #welcome {
+    margin: 50px 0;
+    text-align: center;
+  }
+
+  .garizim-links i {
+    font-size: 22px;
+    margin: 15px;
+  }
+
+  #band-title {
+    font-size: 70px;
+    top: 180px;
+  }
+
+  .videos {
+    padding: 40px 0 60px 0;
   }
 }
 </style>
