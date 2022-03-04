@@ -123,6 +123,16 @@ export default {
   color: rgb(177, 119, 140);
 }
 
+.content {
+  -webkit-box-shadow: 0px 0px 25px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 25px 10px rgba(0, 0, 0, 0.15);
+}
+
+.audio-player {
+  -webkit-box-shadow: 0px 1px 20px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 20px 5px rgba(0, 0, 0, 0.1);
+}
+
 .so-me {
   position: absolute;
   right: 55px;

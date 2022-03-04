@@ -25,11 +25,23 @@
         five original compositions, Garizim enters a new era - Celebrating more
         than 10 years together.
       </p>
-      <p data-aos="fade-in">
-        <b>Elias Frigård:</b> Soprano- & Baritone Saxophone <br />
+      <p data-aos="fade-in" class="not-mobile">
+        <b>Elias Frigård:</b>Soprano & Baritone Saxophone <br />
         <b>Johannes Geworkian Hellman:</b> Hurdy-Gurdy <br /><b>
           Jordi Carrasco Hjelm:</b
         >
+        Double Bass
+      </p>
+      <p class="if-mobile">
+        <b>Elias Frigård</b><br />
+        Soprano & Baritone Saxophone
+      </p>
+      <p class="if-mobile">
+        <b>Johannes Geworkian Hellman</b><br />
+        Hurdy-Gurdy
+      </p>
+      <p class="if-mobile">
+        <b>Jordi Carrasco Hjelm</b><br />
         Double Bass
       </p>
       <div data-aos="fade-in" id="welcome-meta">
@@ -339,7 +351,23 @@ export default {
   padding: 80px 0 40px 0;
 }
 
+.if-mobile {
+  display: none;
+}
+
+.not-mobile {
+  display: block;
+}
+
 @media screen and (max-width: 1200px) {
+  .if-mobile {
+    display: block;
+  }
+
+  .not-mobile {
+    display: none;
+  }
+
   .home {
     background-position: 80%;
   }

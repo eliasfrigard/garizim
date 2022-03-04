@@ -532,6 +532,12 @@ td {
     display: block;
   }
 
+  .song-container {
+    scroll: none; /* 
+    height: calc(100vh - 75px);
+    align-items: flex-end; */
+  }
+
   .song-table-mobile div {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: 15px;
